@@ -11,11 +11,41 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"6 C:\Users\20185070\MPLABXProjects\disp7seg-ELE3T\disp7seg ELE3T.X\main.c
+"4 C:\Users\20185070\MPLABXProjects\disp7seg-ELE3T\disp7seg ELE3T.X\delay.c
+[v _delay delay `(v  1 e 1 0 ]
+"15 C:\Users\20185070\MPLABXProjects\disp7seg-ELE3T\disp7seg ELE3T.X\main.c
 [v _main main `(v  1 e 1 0 ]
+"5 C:\Users\20185070\MPLABXProjects\disp7seg-ELE3T\disp7seg ELE3T.X\segmentos.c
+[v _segmentos_init segmentos_init `(v  1 e 1 0 ]
+"11
+[v _segmentos segmentos `(v  1 e 1 0 ]
+"352 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"7 C:\Users\20185070\MPLABXProjects\disp7seg-ELE3T\disp7seg ELE3T.X\main.c
+[v _vetor vetor `[16]uc  1 e 16 0 ]
+"15
 [v _main main `(v  1 e 1 0 ]
 {
-"8
-[v main@estado estado `i  1 a 2 0 ]
-"43
+"17
+[v main@cont cont `i  1 a 2 5 ]
+"27
+} 0
+"5 C:\Users\20185070\MPLABXProjects\disp7seg-ELE3T\disp7seg ELE3T.X\segmentos.c
+[v _segmentos_init segmentos_init `(v  1 e 1 0 ]
+{
+"9
+} 0
+"11
+[v _segmentos segmentos `(v  1 e 1 0 ]
+{
+[v segmentos@c c `i  1 p 2 0 ]
+"14
+} 0
+"4 C:\Users\20185070\MPLABXProjects\disp7seg-ELE3T\disp7seg ELE3T.X\delay.c
+[v _delay delay `(v  1 e 1 0 ]
+{
+[v delay@t t `ui  1 p 2 0 ]
+"12
 } 0

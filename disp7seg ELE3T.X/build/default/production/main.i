@@ -2523,42 +2523,33 @@ extern __bank0 __bit __timeout;
 void delay(unsigned int t );
 # 4 "main.c" 2
 
+# 1 "./segmentos.h" 1
 
-void main(void)
+
+
+void segmentos_init (void);
+void segmentos (int c);
+# 5 "main.c" 2
+
+
+char vetor [16] =
 {
-    int estado = 0;
-    int t;
-    while( 1 )
+ 0x3F, 0x06, 0x5B, 0x4F,
+ 0x66, 0x6D, 0x7D, 0x07,
+ 0x79, 0x7F, 0x6F, 0x77,
+ 0x7C, 0x39, 0x5E, 0x71
+};
+
+void main (void)
+{
+    int cont = 0;
+    segmentos_init();
+    while ( 1 )
     {
-        switch ( estado )
-        {
-            case 0:
-                   break;
-
-            case 1:
-                   break;
-
-            case 2:
-                   break;
-
-            case 3:
-                   break;
-
-            case 4:
-                   break;
-
-            case 5:
-                   break;
-
-            case 6:
-                   break;
-
-            case 7:
-                   break;
-
-            case 8:
-                   break;
-
-        }
+        segmentos( vetor[cont]);
+        delay (1000);
+        cont++;
+        if (cont >= 16)
+            cont = 0;
     }
 }

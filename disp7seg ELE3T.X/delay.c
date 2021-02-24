@@ -1,5 +1,4 @@
 #include <xc.h>
-#include "delay.h"
 #include "config.h"
 
 void delay(unsigned int t )

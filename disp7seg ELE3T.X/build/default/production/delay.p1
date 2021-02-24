@@ -261,38 +261,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x BOR4V = BOR40V ]
 "19
 [p x WRT = OFF ]
-"5 delay.c
-[; ;delay.c: 5: void delay(unsigned int t )
+"4 delay.c
+[; ;delay.c: 4: void delay(unsigned int t )
 [v _delay `(v ~T0 @X0 1 ef1`ui ]
-"7
-[; ;delay.c: 7: {
+"6
+[; ;delay.c: 6: {
 {
 [e :U _delay ]
-"5
-[; ;delay.c: 5: void delay(unsigned int t )
+"4
+[; ;delay.c: 4: void delay(unsigned int t )
 [v _t `ui ~T0 @X0 1 r1 ]
-"7
-[; ;delay.c: 7: {
+"6
+[; ;delay.c: 6: {
 [f ]
-"8
-[; ;delay.c: 8:     while ( 1 )
+"7
+[; ;delay.c: 7:     while ( 1 )
 [e :U 140 ]
-"9
-[; ;delay.c: 9:     {
+"8
+[; ;delay.c: 8:     {
 {
-"10
-[; ;delay.c: 10:         _delay((unsigned long)((1)*(4000000/4000.0)));
+"9
+[; ;delay.c: 9:         _delay((unsigned long)((1)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"11
-[; ;delay.c: 11:         --t;
+"10
+[; ;delay.c: 10:         --t;
 [e =- _t -> -> 1 `i `ui ]
-"12
-[; ;delay.c: 12:     }
+"11
+[; ;delay.c: 11:     }
 }
 [e :U 139 ]
 [e $U 140  ]
 [e :U 141 ]
-"13
-[; ;delay.c: 13: }
+"12
+[; ;delay.c: 12: }
 [e :UE 138 ]
 }
