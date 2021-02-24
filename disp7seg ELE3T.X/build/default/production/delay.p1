@@ -275,7 +275,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;delay.c: 6: {
 [f ]
 "7
-[; ;delay.c: 7:     while ( 1 )
+[; ;delay.c: 7:     while ( t )
+[e $U 139  ]
 [e :U 140 ]
 "8
 [; ;delay.c: 8:     {
@@ -290,7 +291,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;delay.c: 11:     }
 }
 [e :U 139 ]
-[e $U 140  ]
+"7
+[; ;delay.c: 7:     while ( t )
+[e $ != _t -> -> 0 `i `ui 140  ]
 [e :U 141 ]
 "12
 [; ;delay.c: 12: }

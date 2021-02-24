@@ -2494,7 +2494,36 @@ extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
 # 2 "segmentos.c" 2
 
+# 1 "./config.h" 1
 
+
+
+
+
+#pragma config FOSC = INTRC_NOCLKOUT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = OFF
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
+
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+# 3 "segmentos.c" 2
+
+
+char vetor [16] =
+{
+ 0x3F, 0x06, 0x5B, 0x4F,
+ 0x66, 0x6D, 0x7D, 0x07,
+ 0x79, 0x7F, 0x6F, 0x77,
+ 0x7C, 0x39, 0x5E, 0x71
+};
 
 void segmentos_init (void)
 {
@@ -2504,5 +2533,5 @@ void segmentos_init (void)
 
 void segmentos (int c)
 {
-    PORTD = c;
+    PORTD = vetor [ c ];
 }

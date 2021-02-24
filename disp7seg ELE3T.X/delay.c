@@ -4,7 +4,7 @@
 void delay(unsigned int t )
 
 {
-    while ( 1 )
+    while ( t )
     {
         __delay_ms(1);
         --t;

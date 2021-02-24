@@ -2519,7 +2519,7 @@ extern __bank0 __bit __timeout;
 void delay(unsigned int t )
 
 {
-    while ( 1 )
+    while ( t )
     {
         _delay((unsigned long)((1)*(4000000/4000.0)));
         --t;

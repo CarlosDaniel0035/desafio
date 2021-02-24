@@ -1,1 +1,1 @@
-build/default/production\segmentos.p1: segmentos.c
+build/default/production\segmentos.p1: segmentos.c config.h
