@@ -2,6 +2,7 @@
 #include <xc.h>
 #include "config.h"
 
+
 char vetor [16] = 
 {
  0x3F, 0x06, 0x5B, 0x4F, 
@@ -12,11 +13,28 @@ char vetor [16] =
 
 void segmentos_init (void)
 {
-    TRISD = 0;
-    PORTD = 0;
+    TRISB = 0;
+    PORTB = 0;
 }
 
 void segmentos (int c)
 {
-    PORTD = vetor [ c ];
+    PORTB = vetor [ c ];
+}
+
+void botoes_init (void)
+{
+    TRISDbits.TRISD0 = 1;
+    TRISDbits.TRISD1 = 1;
+    PORTDbits.RD0 = 0;
+    PORTDbits.RD1 = 0;
+}
+
+int s1 (void)
+{
+   return (TRISDbits.TRISD1);
+}
+int s0 (void)
+{
+   return (TRISDbits.TRISD0);
 }

@@ -1,10 +1,32 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"1602 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
-[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"352
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"1478 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"228
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"1608
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1608:     struct {
+[s S59 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S59 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"1607
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1607: typedef union {
+[u S58 `S59 1 ]
+[n S58 . . ]
+"1619
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1619: extern volatile TRISDbits_t TRISDbits __attribute__((address(0x088)));
+[v _TRISDbits `VS58 ~T0 @X0 0 e@136 ]
+"358
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 358:     struct {
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"357
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 357: typedef union {
+[u S11 `S12 1 ]
+[n S11 . . ]
+"369
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 369: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x008)));
+[v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -263,8 +285,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x BOR4V = BOR40V ]
 "19
 [p x WRT = OFF ]
-"5 segmentos.c
-[; ;segmentos.c: 5: char vetor [16] =
+"6 segmentos.c
+[; ;segmentos.c: 6: char vetor [16] =
 [v _vetor `uc ~T0 @X0 -> 16 `i e ]
 [i _vetor
 :U ..
@@ -286,41 +308,97 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 113 `i `uc
 ..
 ]
-"13
-[; ;segmentos.c: 13: void segmentos_init (void)
-[v _segmentos_init `(v ~T0 @X0 1 ef ]
 "14
-[; ;segmentos.c: 14: {
+[; ;segmentos.c: 14: void segmentos_init (void)
+[v _segmentos_init `(v ~T0 @X0 1 ef ]
+"15
+[; ;segmentos.c: 15: {
 {
 [e :U _segmentos_init ]
 [f ]
-"15
-[; ;segmentos.c: 15:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
 "16
-[; ;segmentos.c: 16:     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
+[; ;segmentos.c: 16:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
 "17
-[; ;segmentos.c: 17: }
+[; ;segmentos.c: 17:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+"18
+[; ;segmentos.c: 18: }
 [e :UE 138 ]
 }
-"19
-[; ;segmentos.c: 19: void segmentos (int c)
-[v _segmentos `(v ~T0 @X0 1 ef1`i ]
 "20
-[; ;segmentos.c: 20: {
+[; ;segmentos.c: 20: void segmentos (int c)
+[v _segmentos `(v ~T0 @X0 1 ef1`i ]
+"21
+[; ;segmentos.c: 21: {
 {
 [e :U _segmentos ]
-"19
-[; ;segmentos.c: 19: void segmentos (int c)
-[v _c `i ~T0 @X0 1 r1 ]
 "20
-[; ;segmentos.c: 20: {
-[f ]
+[; ;segmentos.c: 20: void segmentos (int c)
+[v _c `i ~T0 @X0 1 r1 ]
 "21
-[; ;segmentos.c: 21:     PORTD = vetor [ c ];
-[e = _PORTD -> *U + &U _vetor * -> -> _c `ui `ux -> -> # *U &U _vetor `ui `ux `uc ]
+[; ;segmentos.c: 21: {
+[f ]
 "22
-[; ;segmentos.c: 22: }
+[; ;segmentos.c: 22:     PORTB = vetor [ c ];
+[e = _PORTB -> *U + &U _vetor * -> -> _c `ui `ux -> -> # *U &U _vetor `ui `ux `uc ]
+"23
+[; ;segmentos.c: 23: }
 [e :UE 139 ]
+}
+"25
+[; ;segmentos.c: 25: void botoes_init (void)
+[v _botoes_init `(v ~T0 @X0 1 ef ]
+"26
+[; ;segmentos.c: 26: {
+{
+[e :U _botoes_init ]
+[f ]
+"27
+[; ;segmentos.c: 27:     TRISDbits.TRISD0 = 1;
+[e = . . _TRISDbits 0 0 -> -> 1 `i `uc ]
+"28
+[; ;segmentos.c: 28:     TRISDbits.TRISD1 = 1;
+[e = . . _TRISDbits 0 1 -> -> 1 `i `uc ]
+"29
+[; ;segmentos.c: 29:     PORTDbits.RD0 = 0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+"30
+[; ;segmentos.c: 30:     PORTDbits.RD1 = 0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+"31
+[; ;segmentos.c: 31: }
+[e :UE 140 ]
+}
+"33
+[; ;segmentos.c: 33: int s1 (void)
+[v _s1 `(i ~T0 @X0 1 ef ]
+"34
+[; ;segmentos.c: 34: {
+{
+[e :U _s1 ]
+[f ]
+"35
+[; ;segmentos.c: 35:    return (TRISDbits.TRISD1);
+[e ) -> . . _TRISDbits 0 1 `i ]
+[e $UE 141  ]
+"36
+[; ;segmentos.c: 36: }
+[e :UE 141 ]
+}
+"37
+[; ;segmentos.c: 37: int s0 (void)
+[v _s0 `(i ~T0 @X0 1 ef ]
+"38
+[; ;segmentos.c: 38: {
+{
+[e :U _s0 ]
+[f ]
+"39
+[; ;segmentos.c: 39:    return (TRISDbits.TRISD0);
+[e ) -> . . _TRISDbits 0 0 `i ]
+[e $UE 142  ]
+"40
+[; ;segmentos.c: 40: }
+[e :UE 142 ]
 }
