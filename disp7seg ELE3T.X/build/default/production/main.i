@@ -2534,49 +2534,89 @@ int s1 (void);
 int s0 (void);
 # 5 "main.c" 2
 
+# 1 "./contatoresebotoes.h" 1
+
+
+
+void botoes_init (void);
+void contatores_init (void);
+void k1 (int x);
+void k2 (int x);
+void k3 (int x);
+int s1 (void);
+int s0 (void);
+# 6 "main.c" 2
 
 
 void main (void)
 {
+    {
+    int cont = 0;
+    char estado = 0;
+    }
+
     int estado = 0;
     int t;
-    int cont = 0;
-    segmentos_init();
-    while ( 1 )
-
+    while( 1 )
+    {
         switch ( estado )
         {
             case 0:
 
-                        estado = 1;
-                        break;
-            case 1:
-                   if(s1() == 1)
-                        estado = 2;
+                    estado = 1;
+                    break;
 
-                   if (s0() ==1)
-                        estado = 3;
-                        break;
+            case 1:
+                    contatores_init();
+                    botoes_init();
+                    estado = 2;
+                    break;
+
             case 2:
-                   if (cont < 0 )
-                        ++cont;
-                   else
-                       cont = 0;
-                        estado = 4;
-                        break;
+                    if(s1() == 1)
+                        estado = 3;
+                    break;
             case 3:
-                   if (cont >= 9)
-                        --cont;
-                   else
-                       cont = 9;
-                        estado = 4;
-                        break;
+                    k1(1);
+                    k2(1);
+                    k3(0);
+                    cont++;
+                    estado = 4;
+                    break;
 
             case 4:
+                    t = 3000;
+                    estado = 5;
+                    break;
 
-                if (s1() == 0 && s0() ==0)
-                    estado =0;
-                        break;
+            case 5:
+                    delay(1);
+                    --t;
+                    if (t <= 0)
+                        estado = 6;
+                    break;
+
+            case 6:
+                    k1(1);
+                    k2(0);
+                    k3(1);
+                    if (s0() ==1)
+                    estado = 7;
+                    break;
+
+            case 7:
+                    k1(0);
+                    k2(0);
+                    k3(0);
+                    estado = 2;
+                    break;
+            case 8:
+                cont++;
+
+                    break;
+
+
         }
 
+    }
 }
