@@ -2530,7 +2530,7 @@ void botoes_init (void)
 
 void contatores_init (void)
 {
-    TRISDbits.TRISD4 = 0;
+    TRISDbits.TRISD7 = 0;
     TRISDbits.TRISD5 = 0;
     TRISDbits.TRISD6 = 0;
     PORTDbits.RD4 = 0;
@@ -2540,15 +2540,15 @@ void contatores_init (void)
 
 void k1 (int x)
 {
-    PORTDbits.RD6 = x;
+    PORTDbits.RD7 = x;
 }
 void k2 (int x)
 {
-    PORTDbits.RD5 = x;
+    PORTDbits.RD6 = x;
 }
 void k3 (int x)
 {
-    PORTDbits.RD4 = x;
+    PORTDbits.RD5 = x;
 }
 int s1 (void)
 {
